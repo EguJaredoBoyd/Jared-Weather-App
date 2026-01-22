@@ -1,0 +1,83 @@
+/* ==== CSS RESET ==== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 1px solid red;
+}
+
+:root {
+  --background-color: #03045e;
+  --text-color: white;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.weather-app__container {
+  display: flex;
+  flex-direction: column;
+  background-color: pink;
+  height: 100vh;
+}
+
+.search-place {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.search-place input {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.search-place button {
+  border: none;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+main {
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.current-weather {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.place-searched {
+  display: flex;
+  align-items: center;
+  column-gap: 0.2rem;
+  font-size: large;
+}
+
+.place-temperature {
+  display: flex;
+}
+
+.place-temperature__measure h3 {
+  font-size: 10rem;
+  background: linear-gradient(to bottom, white, var(--background-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

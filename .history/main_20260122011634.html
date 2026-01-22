@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <head>
+      <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
+        rel="stylesheet"
+      />
+    </head>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Jared-Weather-App</title>
+  </head>
+  <body class="weather-app">
+    <div class="weather-app__container">
+      <header>
+        <div class="search-place">
+          <input
+            type="text"
+            placeholder="Search city..."
+            aria-label="Search city"
+          />
+          <button>search</button>
+        </div>
+      </header>
+      <main>
+        <section class="current-weather">
+          <div class="place-searched">
+            <i class="ri-map-pin-2-line"></i>
+            <h3 class="city-name">London, UK</h3>
+          </div>
+          <div class="date-today">
+            <time datetime="2026-01-20T10:25">Today, January 20, 10:25</time>
+          </div>
+          <div class="place-temperature">
+            <span class="place-temperature__measure"
+              ><h3><span>16</span></h3></span
+            >
+            <span class="place-temperature__degree">℃</span>
+          </div>
+          <div class="place-forecast">
+            <article class="forecast-item forecast-item--weather">
+              <time datetime="23:00">23:00</time>
+              <p>Slight chance of rain</p>
+            </article>
+
+            <article class="forecast-item forecast-item--wind">
+              <h4>14 km/h</h4>
+              <p>Gentle breeze</p>
+            </article>
+
+            <article class="forecast-item forecast-item--uv">
+              <h4>UVI 2</h4>
+              <p>Low sunburn risk</p>
+            </article>
+          </div>
+        </section>
+        <section class="swipe-section">
+          <!-- Hourly and daily forecast will slide in here! -->
+        </section>
+      </main>
+      <footer>
+        <div><p>Jared-Weather-App</p></div>
+      </footer>
+    </div>
+  </body>
+</html>

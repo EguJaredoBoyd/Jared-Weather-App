@@ -1,0 +1,19 @@
+/* ==== CSS RESET ==== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+    --background-color: #03045E;
+    --text-color: white;
+}
+
+html {
+  font-size: 16px;
+}
+
+body
