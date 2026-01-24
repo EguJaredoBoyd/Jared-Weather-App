@@ -88,7 +88,7 @@ main {
 }
 
 .date-today {
-  font-size: clamp(0.5rem, 3vw, 0.8rem);
+  font-size: clamp(0.3rem, 3vw, 0.8rem);
   background-color: indianred;
 }
 
@@ -113,7 +113,7 @@ main {
   font-size: clamp(1.5rem, 20vw, 3rem);
   position: absolute;
   top: 1.5rem;
-  left: clamp(4rem, 40vw, 9.5rem);
+  left: 9.7rem;
 }
 
 .place-forecast {

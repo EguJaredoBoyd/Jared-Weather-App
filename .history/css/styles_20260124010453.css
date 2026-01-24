@@ -84,11 +84,11 @@ main {
 }
 
 .city-name {
-  font-size: clamp(0.5rem, 6vw, 1.5rem);
+  font-size: clamp(0.5rem, 7vw, 1.5rem);
 }
 
 .date-today {
-  font-size: clamp(0.5rem, 3vw, 0.8rem);
+  font-size: clamp(0.3rem, 5vw, 0.8rem);
   background-color: indianred;
 }
 
@@ -101,7 +101,7 @@ main {
 }
 
 .place-temperature__measure h3 {
-  font-size: clamp(5rem, 38vw, 10rem);
+  font-size: clamp(5rem, 39vw, 10rem);
   background: linear-gradient(to bottom, white, var(--background-color));
   -webkit-background-clip: text;
   background-clip: text;
@@ -113,7 +113,7 @@ main {
   font-size: clamp(1.5rem, 20vw, 3rem);
   position: absolute;
   top: 1.5rem;
-  left: clamp(4rem, 40vw, 9.5rem);
+  left: 9.7rem;
 }
 
 .place-forecast {

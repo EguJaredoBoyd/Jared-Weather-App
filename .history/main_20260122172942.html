@@ -9,10 +9,12 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+    <head>
+      <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
+        rel="stylesheet"
+      />
+    </head>
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Jared-Weather-App</title>
   </head>
@@ -43,29 +45,20 @@
           </div>
           <div class="place-forecast">
             <article class="forecast-item forecast-item--weather">
-              <div>
-                <span><i class="ri-drizzle-line"></i></span>
-                <time datetime="23:00"> <h4>23:00</h4></time>
-              </div>
+              <time datetime="23:00">23:00</time>
               <p>Slight chance of rain</p>
             </article>
             <hr />
 
             <article class="forecast-item forecast-item--wind">
-              <div>
-                <span><i class="ri-arrow-right-up-long-line"></i></span>
-                <h4>14 km/h</h4>
-              </div>
-              <p>Gentle breeze now</p>
+              <h4>14 km/h</h4>
+              <p>Gentle breeze</p>
             </article>
             <hr />
 
             <article class="forecast-item forecast-item--uv">
-              <div>
-                <span><i class="ri-sun-foggy-line"></i></span>
-                <h4>UVI 2</h4>
-              </div>
-              <p>Low sunburn risk today</p>
+              <h4>UVI 2</h4>
+              <p>Low sunburn risk</p>
             </article>
           </div>
         </section>
