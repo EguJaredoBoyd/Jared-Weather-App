@@ -153,25 +153,14 @@ main {
   position: fixed;
   background-color: aquamarine;
   min-height: 100dvh;
-  top: 95%;
+  top: 99%;
   right: 0;
   left: 0;
-  transition: transform 2s ease;
+  transition: transform 0.35s ease;
 }
 
 .swipe-section.is-open {
   background-color: deeppink;
-  transform: translateY(-80%);
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-
-.swipe-forecast {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
 }
 
 footer div p {

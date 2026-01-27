@@ -165,13 +165,7 @@ main {
 }
 
 .no-scroll {
-  overflow: hidden;
-}
-
-.swipe-forecast {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  scroll-behavior: none;
 }
 
 footer div p {

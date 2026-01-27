@@ -70,14 +70,13 @@ main {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  min-height: 100dvh;
 }
 
 .current-weather {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
-  justify-content: space-around;
-  min-height: 100dvh;
 }
 
 .place-searched {
@@ -146,34 +145,5 @@ main {
 
 .forecast-item p {
   font-size: clamp(0.5rem, 2.5vw, 1.1rem);
-  text-align: center;
-}
-
-.swipe-section {
-  position: fixed;
-  background-color: aquamarine;
-  min-height: 100dvh;
-  top: 95%;
-  right: 0;
-  left: 0;
-  transition: transform 2s ease;
-}
-
-.swipe-section.is-open {
-  background-color: deeppink;
-  transform: translateY(-80%);
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-
-.swipe-forecast {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-footer div p {
   text-align: center;
 }

@@ -164,16 +164,6 @@ main {
   transform: translateY(-80%);
 }
 
-.no-scroll {
-  overflow: hidden;
-}
-
-.swipe-forecast {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
 footer div p {
   text-align: center;
 }

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Jared-Weather-App</title>
+  </head>
+  <body class="weather-app">
+    <div class="weather-app__container">
+      <header>
+        <div class="search-place">
+          <input
+            type="text"
+            placeholder="Search city..."
+            aria-label="Search city"
+          />
+          <button>search</button>
+        </div>
+      </header>
+      <main>
+        <section class="current-weather">
+          <div class="place-searched">
+            <i class="ri-map-pin-2-line"></i>
+            <h3 class="city-name">London, UK</h3>
+          </div>
+          <div class="date-today">
+            <time datetime="2026-01-20T10:25">Today, January 20, 10:25</time>
+          </div>
+          <div class="place-temperature">
+            <span class="place-temperature__measure"><h3>16</h3></span>
+            <span class="place-temperature__degree"><h3>℃</h3></span>
+          </div>
+          <div class="place-forecast">
+            <article class="forecast-item forecast-item--weather">
+              <div>
+                <span><i class="ri-drizzle-line"></i></span>
+                <time datetime="23:00"> <h4>23:00</h4></time>
+              </div>
+              <p>Slight chance of rain</p>
+            </article>
+            <hr />
+
+            <article class="forecast-item forecast-item--wind">
+              <div>
+                <span><i class="ri-arrow-right-up-long-line"></i></span>
+                <h4>14 km/h</h4>
+              </div>
+              <p>Gentle breeze now</p>
+            </article>
+            <hr />
+
+            <article class="forecast-item forecast-item--uv">
+              <div>
+                <span><i class="ri-sun-foggy-line"></i></span>
+                <h4>UVI 2</h4>
+              </div>
+              <p>Low sunburn risk today</p>
+            </article>
+          </div>
+        </section>
+        <section class="swipe-section" aria-hidden="true">
+          <!-- Hourly and daily forecast will slide in here! -->
+          <div class="sheet-handle">===</div>
+
+          <article class="sheet-content">
+            <h4>Hourly Forecast</h4>
+            <div class="forecast-content">
+              <div>
+                <h5>7-day forecast</h5>
+              </div>
+              <div>
+                <h5>Wind/ Humidity/ Pressure</h5>
+              </div>
+              <div>
+                <h5>UV index explanation</h5>
+              </div>
+              <div>
+                <h5>Sunrise/ Sunset</h5>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+      <footer>
+        <div><p>Jared-Weather-App</p></div>
+      </footer>
+    </div>
+  </body>
+</html>

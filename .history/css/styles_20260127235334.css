@@ -166,12 +166,7 @@ main {
 
 .no-scroll {
   overflow: hidden;
-}
-
-.swipe-forecast {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  pointer-events: none;
 }
 
 footer div p {
