@@ -171,15 +171,8 @@ main {
 }
 
 .swipe-section button {
-  margin: 0.5rem auto;
+  margin-bottom: 1rem;
   display: flex;
-  justify-self: center;
-  background: none;
-  border: none;
-}
-
-.swipe-section button i {
-  font-size: clamp(0.5rem, 2.5vw, 1.1rem);
 }
 
 .swipe-forecast {

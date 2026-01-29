@@ -171,11 +171,9 @@ main {
 }
 
 .swipe-section button {
-  margin: 0.5rem auto;
+  margin: 1rem auto;
   display: flex;
-  justify-self: center;
-  background: none;
-  border: none;
+  justify-content: center;
 }
 
 .swipe-section button i {

@@ -175,7 +175,6 @@ main {
   display: flex;
   justify-self: center;
   background: none;
-  border: none;
 }
 
 .swipe-section button i {

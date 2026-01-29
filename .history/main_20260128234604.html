@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -71,85 +71,98 @@
           </div>
         </section>
         <section class="swipe-section" aria-hidden="true" id="swipe-section">
-          <!-- Slide for the hourly and daily forecast -->
-          <button class="sheet-handle" id="sheet-handle" aria-expanded="false">
+          <!-- Hourly and daily forecast will slide in here! -->
+          <button class="sheet-handle" id="sheet-handle">
             <i class="ri-arrow-up-double-line" id="icon-handle"></i>
           </button>
 
           <div class="swipe-forecast">
-            <!-- Hourly Forecast -->
             <article class="sheet-card hourly-forecast">
               <h4>Hourly Forecast</h4>
 
               <ul class="hourly-list">
                 <li class="hour">
                   <time datetime="2026-01-27T13:00">1 PM</time>
-                  <img src="" alt="Cloudy weather" />
+                  <img src="" alt="Cloudy" />
                   <span class="temp">18°</span>
                 </li>
               </ul>
             </article>
 
-            <!-- 7-Day Forecast -->
             <article class="sheet-card daily-forecast">
               <h4>7-Day Forecast</h4>
 
               <ul class="daily-list">
                 <li class="day">
                   <span class="day-name">Mon</span>
-                  <img src="" alt="Rainy weather" />
+                  <img src="" alt="Rain" />
                   <span class="temp-range">16° / 22°</span>
                 </li>
               </ul>
             </article>
 
-            <!-- Weather Metrics -->
             <article class="sheet-card weather-metrics">
               <h4>Weather Details</h4>
 
-              <dl class="metrics-grid">
+              <div class="metrics-grid">
                 <div class="metric">
-                  <dt>Wind</dt>
-                  <dd>14 km/h</dd>
+                  <span class="label">Wind</span>
+                  <span class="value">14 km/h</span>
                 </div>
 
                 <div class="metric">
-                  <dt>Humidity</dt>
-                  <dd>62%</dd>
+                  <span class="label">Humidity</span>
+                  <span class="value">62%</span>
                 </div>
 
                 <div class="metric">
-                  <dt>Pressure</dt>
-                  <dd>1013 hPa</dd>
+                  <span class="label">Pressure</span>
+                  <span class="value">1013 hPa</span>
                 </div>
-              </dl>
+              </div>
             </article>
 
-            <!-- Sun Times -->
+            <article class="sheet-card weather-metrics">
+              <h4>Weather Details</h4>
+
+              <div class="metrics-grid">
+                <div class="metric">
+                  <span class="label">Wind</span>
+                  <span class="value">14 km/h</span>
+                </div>
+
+                <div class="metric">
+                  <span class="label">Humidity</span>
+                  <span class="value">62%</span>
+                </div>
+
+                <div class="metric">
+                  <p class="label">Pressure</p>
+                  <p class="value">1013 hPa</p>
+                </div>
+              </div>
+            </article>
+
             <article class="sheet-card sun-times">
               <h4>Sun</h4>
 
-              <dl class="sun-grid">
+              <div class="sun-grid">
                 <div>
-                  <dt>Sunrise</dt>
-                  <dd>
-                    <time datetime="2026-01-27T06:34">6:34 AM</time>
-                  </dd>
+                  <span>Sunrise</span>
+                  <time datetime="2026-01-27T06:34">6:34 AM</time>
                 </div>
 
                 <div>
-                  <dt>Sunset</dt>
-                  <dd>
-                    <time datetime="2026-01-27T18:52">6:52 PM</time>
-                  </dd>
+                  <span>Sunset</span>
+                  <time datetime="2026-01-27T18:52">6:52 PM</time>
                 </div>
-              </dl>
+              </div>
             </article>
           </div>
         </section>
       </main>
       <footer>
-        <div><p>&copy; 2026 Jared-Weather-App</p></div>
+        <div><p>Jared-Weather-App</p></div>
       </footer>
     </div>
   </body>

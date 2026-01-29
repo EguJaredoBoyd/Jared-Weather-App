@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Manrope", sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
   height: 100%;
@@ -149,8 +149,6 @@ main {
   text-align: center;
 }
 
-/* Swipe section styles */
-
 .swipe-section {
   position: fixed;
   background-color: aquamarine;
@@ -170,18 +168,6 @@ main {
   overflow: hidden;
 }
 
-.swipe-section button {
-  margin: 0.5rem auto;
-  display: flex;
-  justify-self: center;
-  background: none;
-  border: none;
-}
-
-.swipe-section button i {
-  font-size: clamp(0.5rem, 2.5vw, 1.1rem);
-}
-
 .swipe-forecast {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -192,10 +178,6 @@ main {
   font-size: clamp(0.5rem, 2.5vw, 1.1rem);
   padding: 1rem;
   background-color: green;
-}
-
-.sheet-card ul {
-  list-style-position: inside;
 }
 
 footer div p {

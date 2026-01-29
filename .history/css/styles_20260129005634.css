@@ -170,18 +170,6 @@ main {
   overflow: hidden;
 }
 
-.swipe-section button {
-  margin: 0.5rem auto;
-  display: flex;
-  justify-self: center;
-  background: none;
-  border: none;
-}
-
-.swipe-section button i {
-  font-size: clamp(0.5rem, 2.5vw, 1.1rem);
-}
-
 .swipe-forecast {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

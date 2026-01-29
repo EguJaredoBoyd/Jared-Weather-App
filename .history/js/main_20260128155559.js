@@ -15,7 +15,7 @@ function handleSwipe() {
     //Statement to switch icons
     iconHandle.className = isOpen
       ? "ri-arrow-down-double-line"
-      : "ri-arrow-up-double-line";
+      : "ri-arrow-down-double-line";
 
     //Add a class to handle the scroll
     document.body.classList.toggle("no-scroll");

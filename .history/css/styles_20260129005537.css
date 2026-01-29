@@ -152,6 +152,9 @@ main {
 /* Swipe section styles */
 
 .swipe-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   position: fixed;
   background-color: aquamarine;
   min-height: 100dvh;
@@ -168,18 +171,6 @@ main {
 
 .no-scroll {
   overflow: hidden;
-}
-
-.swipe-section button {
-  margin: 0.5rem auto;
-  display: flex;
-  justify-self: center;
-  background: none;
-  border: none;
-}
-
-.swipe-section button i {
-  font-size: clamp(0.5rem, 2.5vw, 1.1rem);
 }
 
 .swipe-forecast {
