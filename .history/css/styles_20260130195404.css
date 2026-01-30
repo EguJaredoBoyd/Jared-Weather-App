@@ -11,7 +11,6 @@
 :root {
   --background-color: #03045e;
   --text-color: white;
-  --font: "Montserrat", sans-serif;
 }
 
 html {
@@ -20,10 +19,10 @@ html {
 }
 
 body {
+  font-family: "Montserrat", sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
   height: 100%;
-  font-family: var(--font);
 }
 
 h1,
@@ -56,7 +55,6 @@ p {
   border: none;
   border-bottom-left-radius: 1rem;
   border-top-left-radius: 1rem;
-  font-family: var(--font);
 }
 
 .search-place button {
@@ -64,7 +62,6 @@ p {
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   padding: 0.5rem 1rem;
-  font-family: var(--font);
 }
 
 main {
@@ -156,7 +153,6 @@ main {
   transition: transform 2s ease;
   background-color: var(--text-color);
   color: var(--background-color);
-  border-radius: 2rem;
 }
 
 .swipe-section.is-open {
@@ -176,7 +172,7 @@ main {
 }
 
 .swipe-section button i {
-  font-size: 1rem;
+  font-size: clamp(0.5rem, 2.5vw, 1.1rem);
 }
 
 .swipe-forecast {

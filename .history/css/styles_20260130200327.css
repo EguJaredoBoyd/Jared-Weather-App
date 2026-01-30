@@ -156,7 +156,7 @@ main {
   transition: transform 2s ease;
   background-color: var(--text-color);
   color: var(--background-color);
-  border-radius: 2rem;
+  outline-offset: 2rem;
 }
 
 .swipe-section.is-open {
@@ -176,7 +176,7 @@ main {
 }
 
 .swipe-section button i {
-  font-size: 1rem;
+  font-size: clamp(0.5rem, 2.5vw, 1.1rem);
 }
 
 .swipe-forecast {

@@ -157,6 +157,13 @@ main {
   background-color: var(--text-color);
   color: var(--background-color);
   border-radius: 2rem;
+  clip-path: path(
+    "M 0 40
+     Q 50% 0 100% 40
+     L 100% 100%
+     L 0 100%
+     Z"
+  );
 }
 
 .swipe-section.is-open {
@@ -176,7 +183,7 @@ main {
 }
 
 .swipe-section button i {
-  font-size: 1rem;
+  font-size: clamp(0.5rem, 2.5vw, 1.1rem);
 }
 
 .swipe-forecast {
