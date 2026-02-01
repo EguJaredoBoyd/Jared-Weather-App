@@ -1,0 +1,17 @@
+//My API key 56d08a907c0260865bb8f620502bfcbf
+const WEATHER_API_KEY = "56d08a907c0260865bb8f620502bfcbf ";
+
+//Target my button and search input for city
+const searchInput = document.getElementById("search-input");
+const searchButton = document.getElementById("search-button");
+
+//Create function to ask for weather app
+async function fetchWeather() {
+  try {
+    await fetch(
+      `http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=${WEATHER_API_KEY}`,
+    );
+  } catch (error) {
+    console.error(error.message);
+  }
+}
