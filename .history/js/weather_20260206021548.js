@@ -45,18 +45,18 @@ async function fetchWeather(city) {
 
     //Get time from new date
     function newDateTime() {
-      const utcTime = Date.now();
       const timeZone = apiData.city.timezone;
-      const cityTime = utcTime + timeZone * 1000;
-      const cityDateTime = new Date(cityTime);
+      const utcTime = new Date((cityDate.dt + timeZone) * 1000);
 
-      const hours = cityDateTime.getUTCHours();
-      const minutes = cityDateTime.getUTCMinutes();
-      const seconds = cityDateTime.getUTCSeconds();
+      const hours = utcTime.getUTCHours();
+      const minutes = utcTime.getUTCMinutes();
+      const seconds = utcTime.getUTCSeconds();
 
       //Display the date in the UI
       dateTime.textContent = `Today, ${dateToday},`;
       currentTime.textContent = `${hours}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+
+      console.log(`${hours}, ${minutes}, ${seconds}`);
     }
 
     newDateTime();

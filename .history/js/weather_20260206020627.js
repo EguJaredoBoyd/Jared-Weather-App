@@ -50,9 +50,9 @@ async function fetchWeather(city) {
       const cityTime = utcTime + timeZone * 1000;
       const cityDateTime = new Date(cityTime);
 
-      const hours = cityDateTime.getUTCHours();
-      const minutes = cityDateTime.getUTCMinutes();
-      const seconds = cityDateTime.getUTCSeconds();
+      const hours = cityDateTime.getHours();
+      const minutes = cityDateTime.getMinutes();
+      const seconds = cityDateTime.getSeconds();
 
       //Display the date in the UI
       dateTime.textContent = `Today, ${dateToday},`;

@@ -8,8 +8,6 @@ const searchButton = document.getElementById("search-button");
 //Target The innerHTMLs for manipulation
 const cityName = document.querySelector(".city-name");
 const countryName = document.getElementById("country-name");
-const dateTime = document.getElementById("date-time");
-const currentTime = document.getElementById("current-time");
 
 //Create function to ask for weather app
 async function fetchWeather(city) {
@@ -21,50 +19,33 @@ async function fetchWeather(city) {
     const apiData = await apiResponse.json();
     console.log(apiData);
 
-    //Get the API weather city endpoints
-    const countryCity = apiData.city;
+    //Get the API the weather API endpoints
+    const city = apiData.city;
+    const country = apiData.country;
     const weatherDataDisplay = apiData.list[0];
 
     const cityDate = apiData.list[0];
 
     //Display the country in UI
-    cityName.textContent = `${city},`;
-    countryName.textContent = `${countryCity.country}`;
+    cityName.textContent = ``;
+    console.log(city.name);
+    console.log(countryDataDisplay.country);
 
-    console.log(countryCity.name);
-    console.log(countryCity.country);
-
-    //Get the API weather date endpoints
+    //Display the date of the city
     const currentDateTime = cityDate.dt * 1000;
     const date = new Date(currentDateTime);
-    const dateToday = date.toLocaleDateString("en-GB", {
-      weekday: "short",
-      month: "short",
-      day: "numeric",
-    });
+    const timeZone = apiData.city.timezone * 1000;
+    const localDate = Date.now();
 
-    //Get time from new date
-    function newDateTime() {
-      const utcTime = Date.now();
-      const timeZone = apiData.city.timezone;
-      const cityTime = utcTime + timeZone * 1000;
-      const cityDateTime = new Date(cityTime);
+    console.log(
+      date.toLocaleDateString("en-GB", {
+        weekday: "short",
+        month: "short",
+        day: "numeric",
+      }),
+    );
 
-      const hours = cityDateTime.getUTCHours();
-      const minutes = cityDateTime.getUTCMinutes();
-      const seconds = cityDateTime.getUTCSeconds();
-
-      //Display the date in the UI
-      dateTime.textContent = `Today, ${dateToday},`;
-      currentTime.textContent = `${hours}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
-    }
-
-    newDateTime();
-
-    //Update date every minute
-    setInterval(() => {
-      newDateTime();
-    }, 1000);
+    console.log(localDate.toLocaleString("en-GB"));
 
     console.log(apiData.list[0].main.temp);
     console.log(apiData.list[0].weather[0].description);

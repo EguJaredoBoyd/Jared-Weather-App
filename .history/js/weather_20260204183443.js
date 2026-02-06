@@ -42,29 +42,15 @@ async function fetchWeather(city) {
       month: "short",
       day: "numeric",
     });
+    const timeZone = apiData.city.timezone * 1000;
+    const localDate = Date.now();
 
-    //Get time from new date
-    function newDateTime() {
-      const utcTime = Date.now();
-      const timeZone = apiData.city.timezone;
-      const cityTime = utcTime + timeZone * 1000;
-      const cityDateTime = new Date(cityTime);
+    //Display the date in the UI
+    dateTime.textContent = ``;
 
-      const hours = cityDateTime.getUTCHours();
-      const minutes = cityDateTime.getUTCMinutes();
-      const seconds = cityDateTime.getUTCSeconds();
+    console.log();
 
-      //Display the date in the UI
-      dateTime.textContent = `Today, ${dateToday},`;
-      currentTime.textContent = `${hours}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
-    }
-
-    newDateTime();
-
-    //Update date every minute
-    setInterval(() => {
-      newDateTime();
-    }, 1000);
+    console.log(localDate.toLocaleString("en-GB"));
 
     console.log(apiData.list[0].main.temp);
     console.log(apiData.list[0].weather[0].description);

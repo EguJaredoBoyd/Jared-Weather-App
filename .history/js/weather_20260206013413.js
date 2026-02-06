@@ -8,7 +8,7 @@ const searchButton = document.getElementById("search-button");
 //Target The innerHTMLs for manipulation
 const cityName = document.querySelector(".city-name");
 const countryName = document.getElementById("country-name");
-const dateTime = document.getElementById("date-time");
+const dateTimeElement = document.getElementById("date-time");
 const currentTime = document.getElementById("current-time");
 
 //Create function to ask for weather app
@@ -43,28 +43,26 @@ async function fetchWeather(city) {
       day: "numeric",
     });
 
-    //Get time from new date
-    function newDateTime() {
+    //Update every minute
+    setInterval(() => {
+      //Get time from new date
       const utcTime = Date.now();
-      const timeZone = apiData.city.timezone;
-      const cityTime = utcTime + timeZone * 1000;
+      const timeZone = apiData.city.timezone * 1000;
+      const cityTime = utcTime + timeZone;
       const cityDateTime = new Date(cityTime);
 
-      const hours = cityDateTime.getUTCHours();
-      const minutes = cityDateTime.getUTCMinutes();
-      const seconds = cityDateTime.getUTCSeconds();
+      const hours = cityDateTime.getHours();
+      const minutes = cityDateTime.getMinutes();
 
       //Display the date in the UI
-      dateTime.textContent = `Today, ${dateToday},`;
-      currentTime.textContent = `${hours}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
-    }
+      dateTimeElement.textContent = `Today, ${dateToday},`;
+      currentTime.textContent = `${hours}:${minutes.toString().padStart(2, "0")}`;
 
-    newDateTime();
+      console.log(cityDateTime);
+      console.log(`${hours}, ${minutes}`);
+    }, 60000);
 
-    //Update date every minute
-    setInterval(() => {
-      newDateTime();
-    }, 1000);
+    console.log(dateToday);
 
     console.log(apiData.list[0].main.temp);
     console.log(apiData.list[0].weather[0].description);

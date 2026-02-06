@@ -67,8 +67,7 @@ p {
   padding: 0.5rem 1rem;
   font-family: var(--font);
   margin-left: -1rem;
-  background: rgb(170, 168, 168);
-  color: var(--text-color);
+  background: none;
 }
 
 main {
@@ -92,14 +91,7 @@ main {
   font-size: large;
 }
 
-.place-name {
-  display: flex;
-  align-items: center;
-  column-gap: 0.2rem;
-}
-
-.city-name,
-#country-name {
+.city-name {
   font-size: clamp(0.5rem, 6vw, 1.5rem);
 }
 

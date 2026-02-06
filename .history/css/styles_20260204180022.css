@@ -92,14 +92,11 @@ main {
   font-size: large;
 }
 
-.place-name {
+.place-time {
   display: flex;
-  align-items: center;
-  column-gap: 0.2rem;
 }
 
-.city-name,
-#country-name {
+.city-name {
   font-size: clamp(0.5rem, 6vw, 1.5rem);
 }
 

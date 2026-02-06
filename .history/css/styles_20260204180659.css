@@ -95,6 +95,7 @@ main {
 .place-name {
   display: flex;
   align-items: center;
+  background-color: red;
   column-gap: 0.2rem;
 }
 

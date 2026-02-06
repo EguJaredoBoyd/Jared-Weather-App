@@ -57,7 +57,6 @@ p {
   border-bottom-left-radius: 1rem;
   border-top-left-radius: 1rem;
   font-family: var(--font);
-  outline: none;
 }
 
 .search-place button {
@@ -66,9 +65,6 @@ p {
   border-bottom-right-radius: 1rem;
   padding: 0.5rem 1rem;
   font-family: var(--font);
-  margin-left: -1rem;
-  background: rgb(170, 168, 168);
-  color: var(--text-color);
 }
 
 main {
@@ -80,7 +76,7 @@ main {
 .current-weather {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   /* row-gap: clamp(2.5rem, 2.5vw, 5rem); */
   min-height: 75dvh;
 }
@@ -92,14 +88,7 @@ main {
   font-size: large;
 }
 
-.place-name {
-  display: flex;
-  align-items: center;
-  column-gap: 0.2rem;
-}
-
-.city-name,
-#country-name {
+.city-name {
   font-size: clamp(0.5rem, 6vw, 1.5rem);
 }
 
