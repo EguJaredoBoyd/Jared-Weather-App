@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 
 :root {
@@ -105,7 +105,7 @@ main {
 }
 
 .place-temperature__measure {
-  font-size: clamp(5rem, 38vw, 10rem);
+  font-size: clamp(3rem, 38vw, 10rem);
   font-weight: 700;
   background: linear-gradient(to bottom, white, var(--background-color));
   -webkit-background-clip: text;

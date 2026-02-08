@@ -14,9 +14,6 @@ const currentTime = document.getElementById("current-time");
 //Target the innerHTMLs for manipulation of weather elements
 const tempMeasure = document.getElementById("temp-measure");
 const weatherIcon = document.getElementById("weather-icon");
-const weatherDescription = document.getElementById("weather-description");
-const windSpeed = document.getElementById("wind-speed");
-const humidity = document.getElementById("humidity");
 
 //Create function to ask for weather app
 async function fetchWeather(city) {
@@ -74,18 +71,6 @@ async function fetchWeather(city) {
       tempMeasure.textContent = `${temperature}`;
 
       const description = apiData.list[0].weather[0].description;
-      weatherDescription.textContent = `${description}`;
-
-      const getIcon = apiData.list[0].weather[0].icon;
-      weatherIcon.src = `https://openweathermap.org/img/wn/${getIcon}@2x.png`;
-      weatherIcon.alt = `${description}`;
-
-      const getWindSpeed = apiData.list[0].wind.speed;
-      const getWindSpeedKMH = Math.round(getWindSpeed * 3.6);
-      windSpeed.textContent = `${getWindSpeedKMH} km/h`;
-
-      const getHumidity = apiData.list[0].main.humidity;
-      humidity.textContent = `${getHumidity} %`;
     }
 
     getWeatherForcast();

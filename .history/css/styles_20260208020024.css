@@ -144,14 +144,15 @@ main {
 
 .forecast-item span {
   font-size: clamp(0.5rem, 2.5vw, 1.1rem);
+  text-align: center;
 }
 
 .forecast-item--weather {
 }
 
-.forecast-item--weather div img {
-  width: 1rem;
-  height: 1rem;
+.forecast-item--weather div span img {
+  width: 0.5rem;
+  height: 0.5rem;
 }
 
 /* Swipe section styles */

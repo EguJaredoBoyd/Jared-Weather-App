@@ -83,9 +83,6 @@ async function fetchWeather(city) {
       const getWindSpeed = apiData.list[0].wind.speed;
       const getWindSpeedKMH = Math.round(getWindSpeed * 3.6);
       windSpeed.textContent = `${getWindSpeedKMH} km/h`;
-
-      const getHumidity = apiData.list[0].main.humidity;
-      humidity.textContent = `${getHumidity} %`;
     }
 
     getWeatherForcast();

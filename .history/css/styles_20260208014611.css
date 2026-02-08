@@ -123,19 +123,22 @@ main {
 
 .place-forecast {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   border: 2px solid white;
   border-radius: 2rem;
   padding: 1rem;
+  justify-items: center;
 }
 
 .forecast-item {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0.5rem;
 }
 
 .forecast-item div {
   display: flex;
   align-items: center;
-  justify-self: start;
   column-gap: 0.2rem;
   margin-bottom: clamp(0.1rem, 1vh, 1rem);
   font-size: clamp(0.5rem, 2vw, 1.1rem);
@@ -144,12 +147,13 @@ main {
 
 .forecast-item span {
   font-size: clamp(0.5rem, 2.5vw, 1.1rem);
+  text-align: center;
 }
 
 .forecast-item--weather {
 }
 
-.forecast-item--weather div img {
+.forecast-item--weather div span img {
   width: 1rem;
   height: 1rem;
 }

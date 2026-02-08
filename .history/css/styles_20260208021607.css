@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 
 :root {
@@ -72,7 +72,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  min-height: 75dvh;
+  min-height: clamp(70dvh, 75dvh, 80dvh);
 }
 
 .place-searched {

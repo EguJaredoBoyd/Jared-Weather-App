@@ -16,7 +16,6 @@ const tempMeasure = document.getElementById("temp-measure");
 const weatherIcon = document.getElementById("weather-icon");
 const weatherDescription = document.getElementById("weather-description");
 const windSpeed = document.getElementById("wind-speed");
-const humidity = document.getElementById("humidity");
 
 //Create function to ask for weather app
 async function fetchWeather(city) {
@@ -81,11 +80,7 @@ async function fetchWeather(city) {
       weatherIcon.alt = `${description}`;
 
       const getWindSpeed = apiData.list[0].wind.speed;
-      const getWindSpeedKMH = Math.round(getWindSpeed * 3.6);
-      windSpeed.textContent = `${getWindSpeedKMH} km/h`;
-
-      const getHumidity = apiData.list[0].main.humidity;
-      humidity.textContent = `${getHumidity} %`;
+      windSpeed.textContent = `${getWindSpeed}`;
     }
 
     getWeatherForcast();

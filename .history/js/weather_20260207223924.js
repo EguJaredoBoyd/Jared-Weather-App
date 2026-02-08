@@ -5,18 +5,11 @@ const WEATHER_API_KEY = "56d08a907c0260865bb8f620502bfcbf";
 const searchInput = document.getElementById("search-input");
 const searchButton = document.getElementById("search-button");
 
-//Target The innerHTMLs for manipulation of time elements
+//Target The innerHTMLs for manipulation
 const cityName = document.querySelector(".city-name");
 const countryName = document.getElementById("country-name");
 const dateTime = document.getElementById("date-time");
 const currentTime = document.getElementById("current-time");
-
-//Target the innerHTMLs for manipulation of weather elements
-const tempMeasure = document.getElementById("temp-measure");
-const weatherIcon = document.getElementById("weather-icon");
-const weatherDescription = document.getElementById("weather-description");
-const windSpeed = document.getElementById("wind-speed");
-const humidity = document.getElementById("humidity");
 
 //Create function to ask for weather app
 async function fetchWeather(city) {
@@ -68,33 +61,16 @@ async function fetchWeather(city) {
 
     newDateTime();
 
-    //Function to get weather details
     function getWeatherForcast() {
       const temperature = Math.round(apiData.list[0].main.temp);
-      tempMeasure.textContent = `${temperature}`;
-
-      const description = apiData.list[0].weather[0].description;
-      weatherDescription.textContent = `${description}`;
-
-      const getIcon = apiData.list[0].weather[0].icon;
-      weatherIcon.src = `https://openweathermap.org/img/wn/${getIcon}@2x.png`;
-      weatherIcon.alt = `${description}`;
-
-      const getWindSpeed = apiData.list[0].wind.speed;
-      const getWindSpeedKMH = Math.round(getWindSpeed * 3.6);
-      windSpeed.textContent = `${getWindSpeedKMH} km/h`;
-
-      const getHumidity = apiData.list[0].main.humidity;
-      humidity.textContent = `${getHumidity} %`;
     }
-
-    getWeatherForcast();
 
     //Update date every minute
     setInterval(() => {
       newDateTime();
     }, 1000);
 
+    console.log(apiData.list[0].main.temp);
     console.log(apiData.list[0].weather[0].description);
   } catch (error) {
     console.error(error.message);
