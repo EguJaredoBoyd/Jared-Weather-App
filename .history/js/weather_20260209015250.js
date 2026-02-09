@@ -34,12 +34,16 @@ async function fetchWeather(city) {
 
     //Get the API weather city endpoints
     const countryCity = apiData.city;
+    const weatherDataDisplay = apiData.list[0];
 
     const cityDate = apiData.list[0];
 
     //Display the country in UI
     cityName.textContent = `${city},`;
     countryName.textContent = `${countryCity.country}`;
+
+    console.log(countryCity.name);
+    console.log(countryCity.country);
 
     //Get the API weather date endpoints
     const currentDateTime = cityDate.dt * 1000;
@@ -107,6 +111,8 @@ async function fetchWeather(city) {
     setInterval(() => {
       newDateTime();
     }, 1000);
+
+    console.log(apiData.list[0].weather[0].description);
   } catch (error) {
     console.error(error.message);
   }

@@ -34,6 +34,7 @@ async function fetchWeather(city) {
 
     //Get the API weather city endpoints
     const countryCity = apiData.city;
+    const weatherDataDisplay = apiData.list[0];
 
     const cityDate = apiData.list[0];
 

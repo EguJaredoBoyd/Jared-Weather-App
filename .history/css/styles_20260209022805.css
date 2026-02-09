@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 
 :root {
@@ -129,11 +129,15 @@ main {
   padding: 1rem;
 }
 
+.forecast-item {
+}
+
 .forecast-item div {
   display: flex;
   align-items: center;
   justify-self: start;
   column-gap: 0.2rem;
+  margin-bottom: clamp(0.1rem, 1vh, 1rem);
   font-size: clamp(0.5rem, 2vw, 1.1rem);
   font-weight: 700;
 }
@@ -142,13 +146,12 @@ main {
   font-size: clamp(0.5rem, 2.5vw, 1.1rem);
 }
 
-.forecast-item div span i {
-  font-size: clamp(0.25rem, 2.5vw, 1.5rem);
+.forecast-item--weather {
 }
 
 .forecast-item--weather div img {
-  width: clamp(0.5rem, 2vw, 1rem);
-  height: clamp(0.5rem, 2vh, 1rem);
+  width: 1rem;
+  height: 1rem;
 }
 
 /* Swipe section styles */
@@ -166,7 +169,7 @@ main {
 }
 
 .swipe-section.is-open {
-  transform: translateY(-30%);
+  transform: translateY(-80%);
 }
 
 .no-scroll {
@@ -188,7 +191,9 @@ main {
 .swipe-forecast {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
+  justify-content: space-between;
+  min-height: 50dvh;
+  background-color: green;
 }
 
 .sheet-card {
@@ -198,7 +203,6 @@ main {
 
 .weather-header {
   font-weight: 700;
-  margin-bottom: 1rem;
 }
 
 footer div p {

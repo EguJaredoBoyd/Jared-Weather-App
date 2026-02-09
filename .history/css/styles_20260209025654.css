@@ -188,7 +188,8 @@ main {
 .swipe-forecast {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
+  justify-content: space-between;
+  min-height: 20dvh;
 }
 
 .sheet-card {
