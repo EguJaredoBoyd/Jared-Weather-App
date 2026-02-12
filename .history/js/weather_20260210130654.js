@@ -75,28 +75,24 @@ async function fetchWeather(city) {
     newDateTime();
 
     //Function to get weather details
-    function getWeatherForecast() {
+    function getWeatherForcast() {
       const temperature = Math.round(apiData.list[0].main.temp);
       tempMeasure.classList.remove("skeleton", "skeleton-text");
       placeDegree.classList.remove("skeleton", "skeleton-text");
       tempMeasure.textContent = `${temperature}`;
 
       const description = apiData.list[0].weather[0].description;
-      weatherDescription.classList.remove("skeleton", "skeleton-text");
       weatherDescription.textContent = `${description}`;
 
       const getIcon = apiData.list[0].weather[0].icon;
-      weatherIcon.classList.remove("skeleton", "skeleton-text");
       weatherIcon.src = `https://openweathermap.org/img/wn/${getIcon}@2x.png`;
       weatherIcon.alt = `${description}`;
 
       const getWindSpeed = apiData.list[0].wind.speed;
       const getWindSpeedKMH = Math.round(getWindSpeed * 3.6);
-      windSpeed.classList.remove("skeleton", "skeleton-text");
       windSpeed.textContent = `${getWindSpeedKMH} km/h`;
 
       const getHumidity = apiData.list[0].main.humidity;
-      humidity.classList.remove("skeleton", "skeleton-text");
       humidity.textContent = `${getHumidity} %`;
 
       //Swipe Section
@@ -113,15 +109,14 @@ async function fetchWeather(city) {
       weatherTempMin.textContent = `${tempMin}`;
     }
 
-    getWeatherForecast();
+    getWeatherForcast();
 
     //Update date every minute
     setInterval(() => {
       newDateTime();
     }, 1000);
   } catch (error) {
-    console.error(`Fail to fetch: ${error.message}`);
-    console.error(error);
+    console.error(error.message);
   }
 }
 

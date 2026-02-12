@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 
 :root {
@@ -195,11 +195,11 @@ main {
   font-size: clamp(0.5rem, 2.5vw, 1.1rem);
   padding: 1rem;
   display: flex;
-  flex-direction: column;
 }
 
 .sheet-card__content {
-  align-self: center;
+  justify-self: center;
+  background-color: aqua;
 }
 
 .weather-header {

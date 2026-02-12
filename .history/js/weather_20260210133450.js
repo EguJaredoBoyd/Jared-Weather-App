@@ -86,7 +86,7 @@ async function fetchWeather(city) {
       weatherDescription.textContent = `${description}`;
 
       const getIcon = apiData.list[0].weather[0].icon;
-      weatherIcon.classList.remove("skeleton", "skeleton-text");
+      getIcon.classList.remove("skeleton", "skeleton-text");
       weatherIcon.src = `https://openweathermap.org/img/wn/${getIcon}@2x.png`;
       weatherIcon.alt = `${description}`;
 

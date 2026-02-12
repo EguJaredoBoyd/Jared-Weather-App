@@ -200,6 +200,7 @@ main {
 
 .sheet-card__content {
   align-self: center;
+  background-color: aqua;
 }
 
 .weather-header {

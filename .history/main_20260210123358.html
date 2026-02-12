@@ -37,8 +37,8 @@
           <div class="place-searched">
             <i class="ri-map-pin-2-line"></i>
             <div class="place-name">
-              <h3 class="city-name skeleton skeleton-text"></h3>
-              <h3 id="country-name" class="skeleton skeleton-text"></h3>
+              <h3 class="city-name">London,</h3>
+              <h3 id="country-name">UK</h3>
             </div>
           </div>
           <div class="date-today">
@@ -46,37 +46,32 @@
               datetime="2026-01-20"
               id="date-time"
               class="skeleton skeleton-text"
-            ></time>
+              >Today, 20 January,</time
+            >
             <time
               datetime="10:45"
               id="current-time"
               class="skeleton skeleton-text"
-            ></time>
+              >10:25</time
+            >
           </div>
           <div class="place-temperature">
             <span
               class="place-temperature__measure skeleton skeleton-text"
               id="temp-measure"
-            ></span>
-            <span class="place-temperature__degree" id="place-degree"
+              >16</span
+            >
+            <span class="place-temperature__degree skeleton skeleton-text"
               ><i class="ri-celsius-line"></i
             ></span>
           </div>
           <div class="place-forecast">
             <article class="forecast-item forecast-item--weather">
               <div>
-                <img
-                  src=""
-                  alt=""
-                  id="weather-icon"
-                  class="skeleton skeleton-text"
-                />
+                <img src="" alt="" id="weather-icon" />
                 <span>3 Hours</span>
               </div>
-              <span
-                id="weather-description"
-                class="skeleton skeleton-text"
-              ></span>
+              <span id="weather-description">Slight chance of rain</span>
             </article>
             <hr />
 
@@ -85,7 +80,7 @@
                 <span><i class="ri-arrow-right-up-long-line"></i></span>
                 <span>Wind Speed</span>
               </div>
-              <span id="wind-speed" class="skeleton skeleton-text"></span>
+              <span id="wind-speed">20 km/h</span>
             </article>
             <hr />
 
@@ -94,7 +89,7 @@
                 <span><i class="ri-water-percent-line"></i></span>
                 <span>Humidity</span>
               </div>
-              <span id="humidity" class="skeleton skeleton-text"></span>
+              <span id="humidity">80 %</span>
             </article>
           </div>
         </section>
@@ -111,7 +106,9 @@
                 <span>Pressure</span>
                 <span><i class="ri-sun-cloudy-line"></i></span>
               </div>
-              <span id="weather-pressure" class="sheet-card__content">-</span>
+              <span id="weather-pressure" class="sheet-card__content"
+                >10hPa</span
+              >
             </article>
 
             <!-- Visibility and fog Forecast -->
@@ -120,7 +117,9 @@
                 <span>Visibility</span>
                 <span><i class="ri-foggy-fill"></i></span>
               </div>
-              <span id="weather-visibility" class="sheet-card__content">-</span>
+              <span id="weather-visibility" class="sheet-card__content"
+                >1000km</span
+              >
             </article>
 
             <!-- Maximum Temperature -->
@@ -130,7 +129,7 @@
                 <span><i class="ri-sun-line"></i></span>
               </div>
               <div class="sheet-card__content">
-                <span id="weather-temp-max">-</span>
+                <span id="weather-temp-max">16</span>
                 <span><i class="ri-celsius-line"></i></span>
               </div>
             </article>
@@ -142,7 +141,7 @@
                 <span><i class="ri-cloudy-line"></i></span>
               </div>
               <div class="sheet-card__content">
-                <span id="weather-temp-min">-</span>
+                <span id="weather-temp-min">9</span>
                 <span><i class="ri-celsius-line"></i></span>
               </div>
             </article>

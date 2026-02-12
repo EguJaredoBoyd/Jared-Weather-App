@@ -210,3 +210,8 @@ main {
 footer div p {
   text-align: center;
 }
+
+/* SKELETON LOADING STYLES */
+.date-time--date-skeleton {
+  background-color: red;
+}
