@@ -23,22 +23,15 @@ const weatherTempMax = document.getElementById("weather-temp-max");
 const weatherTempMin = document.getElementById("weather-temp-min");
 
 //Target the innerHTMLs to control errors
-const messageElement = document.getElementById("message");
+const messageElement = document.getElementById("measure");
 
 //Target icons to switch class
 const placeDegree = document.getElementById("place-degree");
 
-//Declare time interval
-let timeInterval;
-
 //Create function to handle input error
-function showMessage(text) {
+function showMessage(text, type) {
   messageElement.textContent = text;
-  messageElement.classList.add("showErrorMessage");
-
-  setTimeout(() => {
-    messageElement.classList.remove("showErrorMessage");
-  }, 3000);
+  messageElement.className = `message ${type}`;
 }
 
 //Create function to ask for weather app
@@ -50,12 +43,6 @@ async function fetchWeather(city) {
 
     const apiData = await apiResponse.json();
     console.log(apiData);
-
-    //Check if it is city
-    if (apiData.cod === "404") {
-      showMessage("Not a city");
-      return;
-    }
 
     //Get the API weather city endpoints
     const countryCity = apiData.city;
@@ -138,12 +125,10 @@ async function fetchWeather(city) {
     getWeatherForecast();
 
     //Update date every minute
-    clearInterval(timeInterval);
-    timeInterval = setInterval(() => {
+    setInterval(() => {
       newDateTime();
     }, 1000);
   } catch (error) {
-    showMessage("Weather failed to fetch");
     console.error(`Fail to fetch: ${error.message}`);
     console.error(error);
   }
@@ -152,31 +137,7 @@ async function fetchWeather(city) {
 //Search for city
 searchButton.addEventListener("click", () => {
   const city = searchInput.value.trim();
-  if (!city) {
-    showMessage("Input cannot be empty!");
-    searchInput.focus();
-    return;
-  }
+  if (!city) return;
 
   fetchWeather(city);
-
-  searchInput.value = "";
-  searchInput.focus();
-});
-
-//Use the enter key to search also
-searchInput.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    const city = searchInput.value.trim();
-    if (!city) {
-      showMessage("Input cannot be empty!");
-      searchInput.focus();
-      return;
-    }
-
-    fetchWeather(city);
-
-    searchInput.value = "";
-    searchInput.focus();
-  }
 });

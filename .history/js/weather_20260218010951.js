@@ -154,7 +154,6 @@ searchButton.addEventListener("click", () => {
   const city = searchInput.value.trim();
   if (!city) {
     showMessage("Input cannot be empty!");
-    searchInput.focus();
     return;
   }
 
@@ -162,21 +161,4 @@ searchButton.addEventListener("click", () => {
 
   searchInput.value = "";
   searchInput.focus();
-});
-
-//Use the enter key to search also
-searchInput.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    const city = searchInput.value.trim();
-    if (!city) {
-      showMessage("Input cannot be empty!");
-      searchInput.focus();
-      return;
-    }
-
-    fetchWeather(city);
-
-    searchInput.value = "";
-    searchInput.focus();
-  }
 });

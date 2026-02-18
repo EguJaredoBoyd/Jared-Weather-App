@@ -28,17 +28,14 @@ const messageElement = document.getElementById("message");
 //Target icons to switch class
 const placeDegree = document.getElementById("place-degree");
 
-//Declare time interval
-let timeInterval;
-
 //Create function to handle input error
 function showMessage(text) {
   messageElement.textContent = text;
-  messageElement.classList.add("showErrorMessage");
+  messageElement.style.backgroundColor = "red";
+}
 
-  setTimeout(() => {
-    messageElement.classList.remove("showErrorMessage");
-  }, 3000);
+function clearMessage() {
+  messageElement.textContent = "";
 }
 
 //Create function to ask for weather app
@@ -55,6 +52,8 @@ async function fetchWeather(city) {
     if (apiData.cod === "404") {
       showMessage("Not a city");
       return;
+    } else {
+      clearMessage();
     }
 
     //Get the API weather city endpoints
@@ -138,8 +137,7 @@ async function fetchWeather(city) {
     getWeatherForecast();
 
     //Update date every minute
-    clearInterval(timeInterval);
-    timeInterval = setInterval(() => {
+    setInterval(() => {
       newDateTime();
     }, 1000);
   } catch (error) {
@@ -153,30 +151,9 @@ async function fetchWeather(city) {
 searchButton.addEventListener("click", () => {
   const city = searchInput.value.trim();
   if (!city) {
-    showMessage("Input cannot be empty!");
-    searchInput.focus();
+    showMessage("Input cannot be empty!", "warning");
     return;
   }
 
   fetchWeather(city);
-
-  searchInput.value = "";
-  searchInput.focus();
-});
-
-//Use the enter key to search also
-searchInput.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    const city = searchInput.value.trim();
-    if (!city) {
-      showMessage("Input cannot be empty!");
-      searchInput.focus();
-      return;
-    }
-
-    fetchWeather(city);
-
-    searchInput.value = "";
-    searchInput.focus();
-  }
 });

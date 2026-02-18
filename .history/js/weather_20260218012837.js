@@ -154,7 +154,6 @@ searchButton.addEventListener("click", () => {
   const city = searchInput.value.trim();
   if (!city) {
     showMessage("Input cannot be empty!");
-    searchInput.focus();
     return;
   }
 
