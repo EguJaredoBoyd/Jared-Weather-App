@@ -149,7 +149,7 @@ async function fetchWeather(city) {
   }
 }
 
-//Function for geolocation API
+//Function for geolocation
 async function fetchWeatherByCoords(lat, lon) {
   try {
     const apiResponse = await fetch(
@@ -169,7 +169,6 @@ async function fetchWeatherByCoords(lat, lon) {
   }
 }
 
-//Geolocation function
 function getUserLocation() {
   if (!navigator.geolocation) {
     showMessage("Geolocation not supported");
@@ -184,7 +183,7 @@ function getUserLocation() {
       fetchWeatherByCoords(lat, lon);
     },
     () => {
-      showMessage("Location access denied, input city to search.");
+      showMessage("Location access denied");
     },
   );
 }
@@ -219,9 +218,4 @@ searchInput.addEventListener("keydown", (event) => {
     searchInput.value = "";
     searchInput.focus();
   }
-});
-
-//Run geolocation
-window.addEventListener("load", () => {
-  getUserLocation();
 });

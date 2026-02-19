@@ -149,44 +149,22 @@ async function fetchWeather(city) {
   }
 }
 
-//Function for geolocation API
+//Function for geolocation
 async function fetchWeatherByCoords(lat, lon) {
   try {
     const apiResponse = await fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${WEATHER_API_KEY}`,
+      `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${WEATHER_API_KEY}`
     );
 
     const apiData = await apiResponse.json();
 
-    if (apiData.cod === "404") {
-      showMessage("Location not found");
+    if (apiData.cod === "404"){
+      showMessage('Location not found');
       return;
+
     }
-
-    fetchWeather(apiData.city.name);
-  } catch (error) {
-    showMessage("Weather failed to fetch");
   }
-}
-
-//Geolocation function
-function getUserLocation() {
-  if (!navigator.geolocation) {
-    showMessage("Geolocation not supported");
-    return;
-  }
-
-  navigator.geolocation.getCurrentPosition(
-    (position) => {
-      const lat = position.coords.latitude;
-      const lon = position.coords.longitude;
-
-      fetchWeatherByCoords(lat, lon);
-    },
-    () => {
-      showMessage("Location access denied, input city to search.");
-    },
-  );
+  
 }
 
 //Search for city
@@ -219,9 +197,4 @@ searchInput.addEventListener("keydown", (event) => {
     searchInput.value = "";
     searchInput.focus();
   }
-});
-
-//Run geolocation
-window.addEventListener("load", () => {
-  getUserLocation();
 });

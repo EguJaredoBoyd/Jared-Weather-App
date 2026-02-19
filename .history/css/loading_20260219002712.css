@@ -1,0 +1,35 @@
+/* ==== CSS RESET ==== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  background-color: #03045e;
+}
+
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-bar-container {
+  width: 70%;
+  max-width: 70%;
+  height: 8px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.loading-bar {
+  width: 0%;
+  height: 100%;
+  background: white;
+}

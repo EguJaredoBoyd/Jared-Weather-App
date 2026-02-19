@@ -184,7 +184,7 @@ function getUserLocation() {
       fetchWeatherByCoords(lat, lon);
     },
     () => {
-      showMessage("Location access denied, input city to search.");
+      showMessage("Location access denied, input city to search");
     },
   );
 }
